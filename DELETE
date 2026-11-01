@@ -1,0 +1,19 @@
+USE db_meyldamaryoliana;
+
+-- 1. Membuat 2 record percobaan
+INSERT INTO mahasiswa (nim, nama_mahasiswa, jenis_kelamin, alamat, tanggal_lahir, tahun_angkatan, kode_prodi, kode_induk_dosen)
+VALUES
+('250306099', 'Andi', 'L', 'Jl. Panca Usaha No. 1, Mataram', '2006-01-01', 2025, 'TI', 'DSN001'),
+('250306098', 'Budi', 'L', 'Jl. Panca Usaha No. 2, Mataram', '2006-01-02', 2025, 'TI', 'DSN001');
+
+SELECT * FROM mahasiswa WHERE nim IN ('250306099', '250306098');
+
+-- 2. Periksa dulu dengan SELECT, baru DELETE dengan WHERE
+SELECT * FROM mahasiswa WHERE nim = '250306099';
+DELETE FROM mahasiswa WHERE nim = '250306099';
+
+SELECT * FROM mahasiswa WHERE nim = '250306098';
+DELETE FROM mahasiswa WHERE nim = '250306098';
+
+-- 3. Pastikan data percobaan hilang dan data utama masih utuh
+SELECT * FROM mahasiswa;
