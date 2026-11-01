@@ -1,0 +1,36 @@
+USE db_meyldamaryoliana;
+
+-- 1. Mengubah status mahasiswa (sesuai screenshot)
+UPDATE mahasiswa
+SET status_mahasiswa = 'Cuti'
+WHERE nim = '250306008';
+
+SELECT nim, nama_mahasiswa, status_mahasiswa FROM mahasiswa WHERE nim = '250306008';
+
+-- 2. Mengubah alamat mahasiswa
+UPDATE mahasiswa
+SET alamat = 'Jl. Pejanggik No. 15, Mataram'
+WHERE nim = '250306001';
+
+SELECT nim, nama_mahasiswa, alamat FROM mahasiswa WHERE nim = '250306001';
+
+-- 3. Mengubah nomor telepon dosen
+UPDATE dosen
+SET no_telepon = '081234567899'
+WHERE kode_induk_dosen = 'DSN001';
+
+SELECT kode_induk_dosen, nama_dosen, no_telepon FROM dosen WHERE kode_induk_dosen = 'DSN001';
+
+-- 4. Mengubah nama kelas kuliah
+UPDATE kelas_kuliah
+SET nama_kelas = 'Pemrograman Web Dasar A'
+WHERE kode_kelas = 'KLS002';
+
+SELECT kode_kelas, nama_kelas FROM kelas_kuliah WHERE kode_kelas = 'KLS002';
+
+-- 5. Mengubah nilai mahasiswa (UAS dan nilai akhir)
+UPDATE nilai
+SET nilai_uas = 90, nilai_akhir = 84.40
+WHERE nim = '250306009' AND kode_induk_dosen = 'DSN001';
+
+SELECT * FROM nilai WHERE nim = '250306009' AND kode_induk_dosen = 'DSN001';
