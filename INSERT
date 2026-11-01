@@ -1,0 +1,145 @@
+USE db_meyldamaryoliana;
+
+-- 1. DOSEN
+INSERT INTO dosen (kode_induk_dosen, email, nama_dosen, jenis_kelamin, no_telepon, kode_prodi)
+VALUES
+('DSN001', 'ahmad.zulkarnain@uinmataram.ac.id', 'Ahmad Zulkarnain, M.Kom.', 'L', '081234567801', 'TI'),
+('DSN002', 'siti.aminah@uinmataram.ac.id', 'Siti Aminah, M.T.', 'P', '081234567802', 'TI'),
+('DSN003', 'lalu.fauzi@uinmataram.ac.id', 'Lalu Ahmad Fauzi, M.Kom.', 'L', '081234567803', 'TI'),
+('DSN004', 'nurul.hidayati@uinmataram.ac.id', 'Baiq Nurul Hidayati, M.Kom.', 'P', '081234567804', 'TI'),
+('DSN005', 'hendra.wijaya@uinmataram.ac.id', 'Hendra Wijaya, M.Sc.', 'L', '081234567805', 'TI'),
+('DSN006', 'rudi.hartono@uinmataram.ac.id', 'Rudi Hartono, M.Kom.', 'L', '081234567806', 'SI'),
+('DSN007', 'dewi.sartika@uinmataram.ac.id', 'Dewi Sartika, M.M.', 'P', '081234567807', 'SI'),
+('DSN008', 'lalu.setiawan@uinmataram.ac.id', 'Lalu Irwan Setiawan, M.Si.', 'L', '081234567808', 'SI'),
+('DSN009', 'baiq.rahmawati@uinmataram.ac.id', 'Baiq Rahmawati, M.Kom.', 'P', '081234567809', 'SI'),
+('DSN010', 'zainal.abidin@uinmataram.ac.id', 'Zainal Abidin, M.T.', 'L', '081234567810', 'SI'),
+('DSN011', 'muhammad.yusuf@uinmataram.ac.id', 'Muhammad Yusuf, M.Si.', 'L', '081234567811', 'MTK'),
+('DSN012', 'fitria.handayani@uinmataram.ac.id', 'Fitria Handayani, M.Si.', 'P', '081234567812', 'MTK'),
+('DSN013', 'lalu.bahri@uinmataram.ac.id', 'Lalu Samsul Bahri, M.Sc.', 'L', '081234567813', 'MTK'),
+('DSN014', 'ika.puspita@uinmataram.ac.id', 'Baiq Ika Puspita, M.Si.', 'P', '081234567814', 'MTK'),
+('DSN015', 'agus.salim@uinmataram.ac.id', 'Agus Salim, M.Pd.', 'L', '081234567815', 'MTK');
+
+SELECT * FROM dosen;
+
+-- 2. MAHASISWA
+INSERT INTO mahasiswa (nim, nama_mahasiswa, jenis_kelamin, alamat, tanggal_lahir, tahun_angkatan, kode_prodi, kode_induk_dosen)
+VALUES
+('250306001', 'Aulia Rahmawati', 'P', 'Jl. Pejanggik No. 12, Mataram', '2006-03-14', 2025, 'TI', 'DSN001'),
+('250306002', 'Muhammad Rizky Pratama', 'L', 'Jl. Majapahit No. 45, Mataram', '2006-07-22', 2025, 'TI', 'DSN002'),
+('250306003', 'Nurul Hidayah', 'P', 'Jl. Udayana No. 8, Mataram', '2005-11-02', 2025, 'TI', 'DSN003'),
+('250306004', 'Lalu Fajar Ramadhan', 'L', 'Jl. Bung Karno No. 30, Cakranegara', '2006-01-19', 2025, 'TI', 'DSN004'),
+('250306005', 'Baiq Dewi Lestari', 'P', 'Jl. Sriwijaya No. 21, Mataram', '2006-05-09', 2025, 'TI', 'DSN005'),
+('250306006', 'Ahmad Syahrul', 'L', 'Jl. Gajah Mada No. 17, Ampenan', '2005-09-27', 2025, 'TI', 'DSN001'),
+('250306007', 'Siti Khairunnisa', 'P', 'Jl. Langko No. 5, Mataram', '2006-02-11', 2025, 'TI', 'DSN002'),
+('250306008', 'Yoga Prasetyo', 'L', 'Jl. Ahmad Yani No. 63, Selong', '2006-08-30', 2025, 'TI', 'DSN003'),
+('250306009', 'Rina Marlina', 'P', 'Jl. Pendidikan No. 3, Mataram', '2006-04-12', 2025, 'SI', 'DSN009'),
+('250306010', 'Dimas Aditya', 'L', 'Jl. Pemuda No. 14, Mataram', '2005-12-08', 2025, 'SI', 'DSN010'),
+('250306011', 'Putri Ayu Lestari', 'P', 'Jl. Airlangga No. 9, Mataram', '2006-06-21', 2025, 'SI', 'DSN006'),
+('250306012', 'Lalu Hendra Saputra', 'L', 'Jl. Catur Warga No. 27, Mataram', '2006-02-03', 2025, 'SI', 'DSN007'),
+('250306013', 'Baiq Sri Wahyuni', 'P', 'Jl. Panji Tilar No. 6, Cakranegara', '2006-09-15', 2025, 'SI', 'DSN008'),
+('250306014', 'Fauzan Hakim', 'L', 'Jl. Adi Sucipto No. 40, Ampenan', '2005-10-30', 2025, 'SI', 'DSN009'),
+('250306015', 'Anggun Permata', 'P', 'Jl. Lingkar Selatan No. 11, Mataram', '2006-01-25', 2025, 'SI', 'DSN010'),
+('250306016', 'Reza Maulana', 'L', 'Jl. Raya Narmada No. 52, Lombok Barat', '2006-07-07', 2025, 'SI', 'DSN006'),
+('250306017', 'Laila Fitriani', 'P', 'Jl. Saleh Sungkar No. 18, Mataram', '2006-03-29', 2025, 'MTK', 'DSN012'),
+('250306018', 'Bagus Setiawan', 'L', 'Jl. Swasembada No. 7, Mataram', '2005-08-17', 2025, 'MTK', 'DSN013'),
+('250306019', 'Nabila Azzahra', 'P', 'Jl. Kebon Roek No. 33, Ampenan', '2006-05-23', 2025, 'MTK', 'DSN014'),
+('250306020', 'Irfan Maulidi', 'L', 'Jl. Selaparang No. 22, Mataram', '2006-11-11', 2025, 'MTK', 'DSN015'),
+('250306021', 'Ratna Dewi', 'P', 'Jl. Pariwisata No. 4, Senggigi', '2006-04-02', 2025, 'MTK', 'DSN011'),
+('250306022', 'Arif Budiman', 'L', 'Jl. Hasanuddin No. 15, Mataram', '2005-12-19', 2025, 'MTK', 'DSN012'),
+('250306023', 'Mawar Sari', 'P', 'Jl. Brawijaya No. 29, Mataram', '2006-08-08', 2025, 'MTK', 'DSN013'),
+('250306024', 'Taufik Hidayat', 'L', 'Jl. Bangau No. 10, Mataram', '2006-10-01', 2025, 'MTK', 'DSN014');
+
+SELECT * FROM mahasiswa;
+
+-- 3. MATA_KULIAH
+INSERT INTO mata_kuliah (kode_mk, nama_mk, jumlah_sks, kode_prodi)
+VALUES
+('TI101', 'Teknologi Basis Data', 3, 'TI'),
+('TI102', 'Pemrograman Web', 3, 'TI'),
+('TI103', 'Analisis Numerik', 3, 'TI'),
+('TI104', 'Algoritma dan Pemrograman', 3, 'TI'),
+('TI105', 'Jaringan Komputer', 3, 'TI'),
+('TI106', 'Sistem Operasi', 2, 'TI'),
+('SI101', 'Sistem Informasi Manajemen', 3, 'SI'),
+('SI102', 'Analisis dan Perancangan Sistem', 3, 'SI'),
+('SI103', 'Basis Data Lanjut', 3, 'SI'),
+('SI104', 'Manajemen Proyek TI', 3, 'SI'),
+('SI105', 'Pemrograman Berorientasi Objek', 3, 'SI'),
+('SI106', 'Audit Sistem Informasi', 2, 'SI'),
+('MT101', 'Kalkulus I', 3, 'MTK'),
+('MT102', 'Aljabar Linear', 3, 'MTK'),
+('MT103', 'Statistika Dasar', 3, 'MTK'),
+('MT104', 'Matematika Diskrit', 3, 'MTK'),
+('MT105', 'Persamaan Diferensial', 3, 'MTK'),
+('MT106', 'Pengantar Analisis Real', 2, 'MTK');
+
+SELECT * FROM mata_kuliah;
+
+-- 4. KELAS_KULIAH
+INSERT INTO kelas_kuliah (kode_kelas, nama_kelas, tahun_ajaran, kode_induk_dosen, kode_mk)
+VALUES
+('KLS001', 'Teknologi Basis Data A', '2026/2027', 'DSN001', 'TI101'),
+('KLS002', 'Pemrograman Web A', '2026/2027', 'DSN002', 'TI102'),
+('KLS003', 'Analisis Numerik A', '2026/2027', 'DSN003', 'TI103'),
+('KLS004', 'Algoritma dan Pemrograman A', '2026/2027', 'DSN004', 'TI104'),
+('KLS005', 'Jaringan Komputer A', '2026/2027', 'DSN005', 'TI105'),
+('KLS006', 'Sistem Informasi Manajemen A', '2026/2027', 'DSN006', 'SI101'),
+('KLS007', 'Analisis dan Perancangan Sistem A', '2026/2027', 'DSN007', 'SI102'),
+('KLS008', 'Basis Data Lanjut A', '2026/2027', 'DSN008', 'SI103'),
+('KLS009', 'Manajemen Proyek TI A', '2026/2027', 'DSN009', 'SI104'),
+('KLS010', 'Pemrograman Berorientasi Objek A', '2026/2027', 'DSN010', 'SI105'),
+('KLS011', 'Kalkulus I A', '2026/2027', 'DSN011', 'MT101'),
+('KLS012', 'Aljabar Linear A', '2026/2027', 'DSN012', 'MT102'),
+('KLS013', 'Statistika Dasar A', '2026/2027', 'DSN013', 'MT103'),
+('KLS014', 'Matematika Diskrit A', '2026/2027', 'DSN014', 'MT104'),
+('KLS015', 'Persamaan Diferensial A', '2026/2027', 'DSN015', 'MT105');
+
+SELECT * FROM kelas_kuliah;
+
+-- 5. KRS
+INSERT INTO krs (semester, tahun_akademik, tanggal_pengambilan, nim, kode_mk)
+VALUES
+(3, '2026/2027', '2026-09-07', '250306001', 'TI101'),
+(3, '2026/2027', '2026-09-07', '250306001', 'TI102'),
+(3, '2026/2027', '2026-09-07', '250306002', 'TI101'),
+(3, '2026/2027', '2026-09-07', '250306002', 'TI103'),
+(3, '2026/2027', '2026-09-08', '250306003', 'TI102'),
+(3, '2026/2027', '2026-09-08', '250306004', 'TI104'),
+(3, '2026/2027', '2026-09-08', '250306005', 'TI105'),
+(3, '2026/2027', '2026-09-09', '250306006', 'TI103'),
+(3, '2026/2027', '2026-09-07', '250306009', 'SI101'),
+(3, '2026/2027', '2026-09-07', '250306009', 'SI102'),
+(3, '2026/2027', '2026-09-07', '250306010', 'SI101'),
+(3, '2026/2027', '2026-09-07', '250306010', 'SI103'),
+(3, '2026/2027', '2026-09-08', '250306011', 'SI102'),
+(3, '2026/2027', '2026-09-08', '250306012', 'SI104'),
+(3, '2026/2027', '2026-09-08', '250306013', 'SI105'),
+(3, '2026/2027', '2026-09-09', '250306014', 'SI103'),
+(3, '2026/2027', '2026-09-07', '250306017', 'MT101'),
+(3, '2026/2027', '2026-09-07', '250306017', 'MT102'),
+(3, '2026/2027', '2026-09-07', '250306018', 'MT101'),
+(3, '2026/2027', '2026-09-07', '250306018', 'MT103'),
+(3, '2026/2027', '2026-09-08', '250306019', 'MT102'),
+(3, '2026/2027', '2026-09-08', '250306020', 'MT104'),
+(3, '2026/2027', '2026-09-08', '250306021', 'MT105'),
+(3, '2026/2027', '2026-09-09', '250306022', 'MT103');
+
+SELECT * FROM krs;
+
+-- 6. NILAI
+INSERT INTO nilai (nilai_tugas, nilai_uts, nilai_uas, nilai_akhir, nim, kode_induk_dosen)
+VALUES
+(80, 78, 84, 81.40, '250306009', 'DSN001'),
+(70, 68, 74, 71.40, '250306006', 'DSN003'),
+(88, 84, 90, 87.80, '250306014', 'DSN003'),
+(76, 80, 79, 78.70, '250306014', 'DSN005'),
+(92, 85, 88, 87.90, '250306015', 'DSN009'),
+(81, 77, 83, 80.80, '250306016', 'DSN010'),
+(79, 74, 80, 78.00, '250306008', 'DSN004'),
+(86, 82, 85, 84.30, '250306019', 'DSN004'),
+(90, 88, 91, 89.90, '250306019', 'DSN012'),
+(73, 70, 77, 74.10, '250306020', 'DSN012'),
+(84, 79, 82, 81.50, '250306021', 'DSN013'),
+(77, 75, 81, 78.40, '250306022', 'DSN014');
+
+SELECT * FROM nilai;
